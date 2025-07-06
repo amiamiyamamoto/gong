@@ -45,11 +45,12 @@ func playCommand(args []string) error {
 	fmt.Println("Playing...")
 
 	// 再生完了を待つためのチャンネル
-	done := make(chan bool)
+	// done := make(chan bool)
+	done := make(chan struct{})
 
 	// 音声を再生
 	speaker.Play(beep.Seq(streamer, beep.Callback(func() {
-		done <- true
+		done <- struct{}{}
 	})))
 
 	// 再生完了を待つ
