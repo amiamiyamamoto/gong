@@ -4,15 +4,22 @@ import "fmt"
 
 // HelpCommand shows help information
 func HelpCommand(args []string) error {
-	fmt.Println("Gong CLI Application")
+	fmt.Println("🔔 Gong CLI Application")
 	fmt.Println()
-	fmt.Println("Usage: gong <command> [arguments]")
+	fmt.Println("Usage: gong [command] [arguments]")
+	fmt.Println()
+	fmt.Println("When run without arguments, plays the gong sound.")
 	fmt.Println()
 	fmt.Println("Available Commands:")
-	fmt.Println("  help      Show this help message")
-	fmt.Println("  version   Show version information")
+	fmt.Println("  (no args)  Play gong sound (default)")
+	fmt.Println("  play       Play gong sound")
+	fmt.Println("  help       Show this help message")
+	fmt.Println("  version    Show version information")
 	fmt.Println()
-	fmt.Println("Use 'gong <command> --help' for more information about a command.")
+	fmt.Println("Examples:")
+	fmt.Println("  gong           # Play gong sound")
+	fmt.Println("  gong play      # Play gong sound")
+	fmt.Println("  gong help      # Show this help")
 	return nil
 }
 
