@@ -18,18 +18,6 @@ go build -o gong main.go
 ./gong version
 ```
 
-## プロジェクト構造
-
-```
-.
-├── main.go           # エントリーポイント
-├── cmd/              # サブコマンド用のディレクトリ
-├── internal/         # 内部パッケージ（外部からアクセス不可）
-├── pkg/              # 外部からも使用可能なパッケージ
-├── go.mod            # Go modules設定
-└── README.md         # このファイル
-```
-
 ## 開発
 
 ### ビルド
